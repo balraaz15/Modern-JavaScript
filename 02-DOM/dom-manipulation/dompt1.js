@@ -82,3 +82,56 @@ const items = document.querySelectorAll('ul.collection li.collection-item');
 items.forEach(function(item, index){
     item.textContent = `${index} : Hello`;
 });
+
+
+/*=============================================================================*/
+
+// TRAVERSING THE DOM (MOVING UP AND DOWN)
+
+let val;
+
+const list = document.querySelector('ul.collection');
+const listItem = document.querySelector('li.collection-item:first-child');
+
+// Get child nodes
+// First method
+val = list.childNodes; // gives a node list of all the nodes (also counts a line break as a text node)
+val = list.childNodes[0]; // gives the node at index 0
+val = list.childNodes[0].nodeName; // to get the name of the node
+val = list.childNode[0].nodeType; // to get the type of the node
+
+// Types of nodes
+/*
+    1 - Element
+    2 - Attribute (deprecated)
+    3 - Text node
+    8 - Comment
+    9 - Document itself
+    10 - Doctype
+ */
+
+// Second method
+val = list.children; // gives a HTMLCollection of only the html elements
+val = list.firstChild; // Gives the first child node
+val = list.firstElementChild; // gives the first child element
+// similarly, .lastchild and .lastElement are for the last child node and last child element respectively.
+
+val = list.childElementCount; // To get the number of elements inside an element
+
+// Get children of children
+val = list.children[3].children; // gives the children node of child at index 3
+
+// Get Parent Node
+val = listItem.parentNode; // gives the immediate parent node
+val = listItem.parentElement; // gives the immediate parent element
+val = listItem.parentElement.parentElement; // gives the parent element of immediate parent element of the element
+
+// Get next sibling
+val = listItem.nextSibling; // gives the next sibling node
+val listItem.nextElementSibling; // gives the next sibling element
+
+// Get previous sibling;
+val = listItem.previousSibling; // gives the previous sibling node
+val = listItem.previousElementSibling; // gives the previous sibling element
+
+/*============================================================================*/
