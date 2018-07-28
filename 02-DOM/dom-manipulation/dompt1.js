@@ -74,7 +74,7 @@ const listItems = document.querySelector('ul').getElementsByClassName('collectio
 // document.getElementsByTagName()
 const lis = document.getElementsByTagName('li');
 
-// document.querySelectorAll()
+// document.querySelectorAll() => More efficient and powerful
 // gives a node list instead of an array but acts as an array for simple modifications
 const items = document.querySelectorAll('ul.collection li.collection-item');
 
@@ -128,7 +128,7 @@ val = listItem.parentElement.parentElement; // gives the parent element of immed
 
 // Get next sibling
 val = listItem.nextSibling; // gives the next sibling node
-val listItem.nextElementSibling; // gives the next sibling element
+val = listItem.nextElementSibling; // gives the next sibling element
 
 // Get previous sibling;
 val = listItem.previousSibling; // gives the previous sibling node

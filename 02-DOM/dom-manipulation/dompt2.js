@@ -29,7 +29,7 @@ document.querySelector('ul.collection').appendChild(li);
 // REPLACING
 const newHeading = document.createElement('h2'); // creating new element
 newHeading.id = 'task-title'; // Adding id
-newHeading.appendChild(document.createTextNode('Task List')); // New Test
+newHeading.appendChild(document.createTextNode('Task List')); // New heading text
 
 // Get the old heading (the element we want to replace)
 const oldHeading = document.getElementById('task-title');
@@ -44,7 +44,7 @@ cardAction.replaceChild(newHeading, oldHeading);
 const list = document.querySelector('ul');
 const li = document.querySelectorAll('li');
 
-li[0].remove; // removes the first list item
+li[0].remove(); // removes the first list item
 list.removeChild(li[3]); // removes child element
 
 // CLASSES AND ATTRIBUTES
@@ -100,8 +100,8 @@ function onClick(e) {
     val = e.timestamp;
 
     // co-ordinates of event relative to the window
-    val = e.clientY; // gives the number of pixels from the top
-    val = e.clientX; // gives the number of pixels from the left
+    val = e.clientY; // gives the number of pixels from the top of the window
+    val = e.clientX; // gives the number of pixels from the left of the window
 
     // co-ordinates of event relative to the element itself
     val = e.offsetY; // gives which pixel is clicked vertically on the element
